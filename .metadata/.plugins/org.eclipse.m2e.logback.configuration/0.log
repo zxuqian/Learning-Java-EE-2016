@@ -724,3 +724,10 @@ Caused by: org.eclipse.core.runtime.CoreException: One or more constraints have 
 2016-12-24 18:27:13,196 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/zxuqian/git/Learning-Java-EE-2016/zxuqian/notebook/src/main/resources
 2016-12-24 18:27:13,197 [Worker-77] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-12-24 18:27:13,197 [Worker-77] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/zxuqian/git/Learning-Java-EE-2016/zxuqian/notebook/src/test/resources
+2016-12-24 19:47:42,568 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-12-24 19:47:42,569 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/zxuqian/git/Learning-Java-EE-2016/zxuqian/notebook/src/main/resources
+2016-12-24 19:47:42,571 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-12-24 19:47:42,571 [Worker-91] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/zxuqian/git/Learning-Java-EE-2016/zxuqian/notebook/src/test/resources
+2016-12-24 19:47:42,571 [Worker-91] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of notebook
+2016-12-24 19:47:42,572 [Worker-91] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for notebook
+2016-12-24 19:47:42,588 [Worker-91] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
