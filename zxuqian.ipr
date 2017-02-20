@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactManager">
+    <artifact type="ear" name="notebookEAR:ear">
+      <output-path>$PROJECT_DIR$/notebookEAR/target</output-path>
+      <root id="archive" name="notebookEAR-0.0.1-SNAPSHOT.ear">
+        <element id="artifact" artifact-name="notebookEAR:ear exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-ear" name="notebookEAR:ear exploded">
+      <output-path>$PROJECT_DIR$/notebookEAR/target/notebookEAR-0.0.1-SNAPSHOT</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="notebookEAR/javaeeApplication/JavaEE" />
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/notebookEAR/target/notebookEAR-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="dir-copy" path="EarContent" />
+        <element id="archive" name="notebook-0.0.1-SNAPSHOT.war">
+          <element id="artifact" artifact-name="notebook:war exploded" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="notebookDomain-0.0.1-SNAPSHOT.jar">
+            <element id="module-output" name="notebookDomain" />
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="war" name="notebook:war">
+      <output-path>$PROJECT_DIR$/notebook/target</output-path>
+      <root id="archive" name="notebook-0.0.1-SNAPSHOT.war">
+        <element id="artifact" artifact-name="notebook:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="notebook:war exploded">
+      <output-path>$PROJECT_DIR$/notebook/target/notebook-0.0.1-SNAPSHOT</output-path>
+      <root id="root">
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="notebook" />
+          </element>
+        </element>
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/notebook/target/notebook-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="javaee-facet-resources" facet="notebook/web/Web" />
+      </root>
+    </artifact>
+  </component>
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="notebook" />
+        <module name="notebookDomain" />
+        <module name="notebookEAR" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="notebook" target="1.8" />
+      <module name="notebookDomain" target="1.8" />
+      <module name="notebookEAR" target="1.5" />
+      <module name="notebookRoot" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/notebookEAR" />
+    <file type="web" url="file://$PROJECT_DIR$/notebook" />
+  </component>
+  <component name="GitSharedSettings">
+    <option name="FORCE_PUSH_PROHIBITED_PATTERNS">
+      <list />
+    </option>
+  </component>
+  <component name="InspectionProjectProfileManager">
+    <profile version="1.0">
+      <option name="myName" value="Project Default" />
+    </profile>
+    <version value="1.0" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/notebookRoot/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/notebook/notebook.iml" filepath="$PROJECT_DIR$/notebook/notebook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notebookDomain/notebookDomain.iml" filepath="$PROJECT_DIR$/notebookDomain/notebookDomain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notebookEAR/notebookEAR.iml" filepath="$PROJECT_DIR$/notebookEAR/notebookEAR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notebookRoot/notebookRoot.iml" filepath="$PROJECT_DIR$/notebookRoot/notebookRoot.iml" />
+    </modules>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+  </component>
+  <component name="libraryTable">
+    <library name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.jboss.spec.javax.faces:jboss-jsf-api_2.2_spec:2.2.11">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/faces/jboss-jsf-api_2.2_spec/2.2.11/jboss-jsf-api_2.2_spec-2.2.11.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/faces/jboss-jsf-api_2.2_spec/2.2.11/jboss-jsf-api_2.2_spec-2.2.11-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/faces/jboss-jsf-api_2.2_spec/2.2.11/jboss-jsf-api_2.2_spec-2.2.11-sources.jar!/" />
+      </SOURCES>
+    </library>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

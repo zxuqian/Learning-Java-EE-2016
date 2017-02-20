@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.zxuqian</groupId>
+  <artifactId>notebookRoot</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+          <groupId>org.wildfly.bom</groupId>
+          <artifactId>wildfly-javaee7</artifactId>
+          <scope>import</scope>
+          <type>pom</type>
+          <version>10.1.0.Final</version>
+        </dependency>
+    </dependencies>
+  </dependencyManagement>
+  
+  <dependencies>
+
+
+    <dependency>
+      <groupId>org.jboss.spec.javax.faces</groupId>
+      <artifactId>jboss-jsf-api_2.2_spec</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate.javax.persistence</groupId>
+      <artifactId>hibernate-jpa-2.1-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+  </dependencies>
+  <modules>
+  	<module>../notebook</module>
+  	<module>../notebookDomain</module>
+  	<module>../notebookEAR</module>
+  </modules>
+</project>
