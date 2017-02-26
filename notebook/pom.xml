@@ -36,5 +36,11 @@
       <artifactId>jboss-jsf-api_2.2_spec</artifactId>
       <scope>provided</scope>
     </dependency>
+
+    <dependency>
+      <groupId>com.zxuqian</groupId>
+      <artifactId>notebookDomain</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 </project>

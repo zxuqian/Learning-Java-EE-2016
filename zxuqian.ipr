@@ -38,6 +38,11 @@
           <element id="directory" name="classes">
             <element id="module-output" name="notebook" />
           </element>
+          <element id="directory" name="lib">
+            <element id="archive" name="notebookDomain-0.0.1-SNAPSHOT.jar">
+              <element id="module-output" name="notebookDomain" />
+            </element>
+          </element>
         </element>
         <element id="directory" name="META-INF">
           <element id="file-copy" path="$PROJECT_DIR$/notebook/target/notebook-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />

@@ -22,5 +22,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jboss.spec.javax.faces:jboss-jsf-api_2.2_spec:2.2.11" level="project" />
+    <orderEntry type="module" module-name="notebookDomain" />
   </component>
 </module>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:form>
+        <label for="username">Username: </label>
+        <h:inputText id="usernmae" value="#{register.user.username}" /><br />
+        <label for="password">Password: </label>
+        <h:inputSecret id="password" value="#{register.user.password}" /><br />
+        <label for="date_of_birth">Date of birth: </label>
+        <input type="date" jsf:id="date_of_birth" value="#{register.user.dateOfBirth}">
+            <f:convertDateTime pattern="yyyy-MM-dd"/>
+        </input>
+        <br />
+        <label for="email">Email: </label>
+        <input type="email" jsf:id="email" value="#{register.user.email}" /><br />
+        <label for="phone">Phone number: </label>
+        <h:inputText  value="#{register.user.phone}" /><br />
+
+        <h:commandButton value="Submit2" action="register_response" />
+    </h:form>
+</html>

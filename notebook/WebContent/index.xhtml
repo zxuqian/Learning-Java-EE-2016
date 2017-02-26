@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -11,7 +11,7 @@
 </h:head>
 <h:body>
     <h2>Hello, welcome!</h2>
-    <p>Add a note here: </p>
+    <p>Please adda note: </p>
     <h:form>
         <label for="username">Name: </label>
         <h:inputText id="username" value="#{note.name}" /><br />
@@ -21,6 +21,15 @@
         <h:inputTextarea id="note" rows="8" value="#{note.note}"></h:inputTextarea><br />
         <input type="submit" jsf:id="submit" action="response" value="Submit" />
     </h:form>
+
+    <h:form>
+        <h:commandLink action="register">
+            <h:outputText value="register1"/>
+        </h:commandLink>
+
+    </h:form>
+
+    <h:outputLink value="register.xhtml">Register</h:outputLink>
 </h:body>
 
 
