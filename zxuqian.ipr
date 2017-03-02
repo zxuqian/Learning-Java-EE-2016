@@ -3,51 +3,134 @@
   <component name="ArtifactManager">
     <artifact type="ear" name="notebookEAR:ear">
       <output-path>$PROJECT_DIR$/notebookEAR/target</output-path>
-      <root id="archive" name="notebookEAR-0.0.1-SNAPSHOT.ear">
+      <root id="archive" name="notebookEAR-0.0.2.ear">
         <element id="artifact" artifact-name="notebookEAR:ear exploded" />
       </root>
     </artifact>
     <artifact type="exploded-ear" name="notebookEAR:ear exploded">
-      <output-path>$PROJECT_DIR$/notebookEAR/target/notebookEAR-0.0.1-SNAPSHOT</output-path>
+      <output-path>$PROJECT_DIR$/notebookEAR/target/notebookEAR-0.0.2</output-path>
       <root id="root">
         <element id="javaee-facet-resources" facet="notebookEAR/javaeeApplication/JavaEE" />
         <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/notebookEAR/target/notebookEAR-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+          <element id="file-copy" path="$PROJECT_DIR$/notebookEAR/target/notebookEAR-0.0.2/META-INF/MANIFEST.MF" />
         </element>
         <element id="dir-copy" path="EarContent" />
-        <element id="archive" name="notebook-0.0.1-SNAPSHOT.war">
-          <element id="artifact" artifact-name="notebook:war exploded" />
-        </element>
         <element id="directory" name="lib">
-          <element id="archive" name="notebookDomain-0.0.1-SNAPSHOT.jar">
+          <element id="archive" name="notebookDomain-0.0.2.jar">
             <element id="module-output" name="notebookDomain" />
           </element>
+          <element id="archive" name="notebookServiceClient-0.0.2.jar">
+            <element id="artifact" artifact-name="notebookServiceClient:ejb exploded" />
+          </element>
+        </element>
+        <element id="archive" name="notebook-0.0.2.war">
+          <element id="artifact" artifact-name="notebook:war exploded" />
+        </element>
+        <element id="archive" name="notebookService-0.0.2.jar">
+          <element id="artifact" artifact-name="notebookService:ejb exploded" />
         </element>
       </root>
     </artifact>
     <artifact type="war" name="notebook:war">
       <output-path>$PROJECT_DIR$/notebook/target</output-path>
-      <root id="archive" name="notebook-0.0.1-SNAPSHOT.war">
+      <root id="archive" name="notebook-0.0.2.war">
         <element id="artifact" artifact-name="notebook:war exploded" />
       </root>
     </artifact>
     <artifact type="exploded-war" name="notebook:war exploded">
-      <output-path>$PROJECT_DIR$/notebook/target/notebook-0.0.1-SNAPSHOT</output-path>
+      <output-path>$PROJECT_DIR$/notebook/target/notebook-0.0.2</output-path>
       <root id="root">
         <element id="directory" name="WEB-INF">
           <element id="directory" name="classes">
             <element id="module-output" name="notebook" />
           </element>
           <element id="directory" name="lib">
-            <element id="archive" name="notebookDomain-0.0.1-SNAPSHOT.jar">
+            <element id="archive" name="notebookDomain-0.0.2.jar">
               <element id="module-output" name="notebookDomain" />
+            </element>
+            <element id="archive" name="notebookService-0.0.2.jar">
+              <element id="module-output" name="notebookService" />
+            </element>
+            <element id="archive" name="notebookServiceClient-0.0.2.jar">
+              <element id="module-output" name="notebookServiceClient" />
             </element>
           </element>
         </element>
         <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/notebook/target/notebook-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+          <element id="file-copy" path="$PROJECT_DIR$/notebook/target/notebook-0.0.2/META-INF/MANIFEST.MF" />
         </element>
         <element id="javaee-facet-resources" facet="notebook/web/Web" />
+      </root>
+    </artifact>
+    <artifact type="ejb-jar" name="notebookDomain:ejb">
+      <output-path>$PROJECT_DIR$/notebookDomain/target</output-path>
+      <root id="archive" name="notebookDomain-0.0.2.jar">
+        <element id="artifact" artifact-name="notebookDomain:ejb exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-ejb" name="notebookDomain:ejb exploded">
+      <output-path>$PROJECT_DIR$/notebookDomain/target/notebookDomain-0.0.2</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="notebookDomain/ejb/EJB" />
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/notebookDomain/target/notebookDomain-0.0.2/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="notebookDomain" />
+      </root>
+    </artifact>
+    <artifact type="exploded-ejb" name="notebookEJB:ejb exploded">
+      <output-path>$PROJECT_DIR$/notebookEJB/target/notebookEJB-0.0.2</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="notebookEJB/ejb/EJB" />
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/notebookService/target/notebookEJB-0.0.2/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="notebookService" />
+      </root>
+    </artifact>
+    <artifact type="exploded-ejb" name="notebookEJB:ejb exploded2">
+      <output-path>$PROJECT_DIR$/out/artifacts/notebookEJB_ejb_exploded2.rar</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="notebookEJB/ejb/EJB" />
+        <element id="module-output" name="notebookService" />
+      </root>
+    </artifact>
+    <artifact type="ejb-jar" name="notebookEJB:ejb">
+      <output-path>$PROJECT_DIR$/notebookEJB/target</output-path>
+      <root id="archive" name="notebookEJB-0.0.2.jar">
+        <element id="artifact" artifact-name="notebookEJB:ejb exploded" />
+      </root>
+    </artifact>
+    <artifact type="ejb-jar" name="notebookService:ejb">
+      <output-path>$PROJECT_DIR$/notebookService/target</output-path>
+      <root id="archive" name="notebookService-0.0.2.jar">
+        <element id="artifact" artifact-name="notebookService:ejb exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-ejb" name="notebookService:ejb exploded">
+      <output-path>$PROJECT_DIR$/notebookService/target/notebookService-0.0.2</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="notebookService/ejb/EJB" />
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/notebookService/target/notebookService-0.0.2/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="notebookService" />
+      </root>
+    </artifact>
+    <artifact type="ejb-jar" name="notebookServiceClient:ejb">
+      <output-path>$PROJECT_DIR$/notebookServiceClient/target</output-path>
+      <root id="archive" name="notebookServiceClient-0.0.2.jar">
+        <element id="artifact" artifact-name="notebookServiceClient:ejb exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-ejb" name="notebookServiceClient:ejb exploded">
+      <output-path>$PROJECT_DIR$/notebookServiceClient/target/notebookServiceClient-0.0.2</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="notebookServiceClient/ejb/EJB" />
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/notebookServiceClient/target/notebookServiceClient-0.0.2/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="notebookServiceClient" />
       </root>
     </artifact>
   </component>
@@ -60,16 +143,24 @@
         <module name="notebook" />
         <module name="notebookDomain" />
         <module name="notebookEAR" />
+        <module name="notebookService" />
+        <module name="notebookServiceClient" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="notebook" target="1.8" />
       <module name="notebookDomain" target="1.8" />
       <module name="notebookEAR" target="1.5" />
+      <module name="notebookEJB" target="1.5" />
       <module name="notebookRoot" target="1.5" />
+      <module name="notebookService" target="1.8" />
+      <module name="notebookServiceClient" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="ejb" url="file://$PROJECT_DIR$/notebookDomain" />
+    <file type="ejb" url="file://$PROJECT_DIR$/notebookService" />
+    <file type="ejb" url="file://$PROJECT_DIR$/notebookServiceClient" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/notebookEAR" />
     <file type="web" url="file://$PROJECT_DIR$/notebook" />
   </component>
@@ -88,15 +179,145 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/notebookRoot/pom.xml" />
+        <option value="$PROJECT_DIR$/notebookService/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/notebookEJB/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="Palette2">
+    <group name="Swing">
+      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
+      </item>
+      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
+        <initial-values>
+          <property name="text" value="Button" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="RadioButton" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="CheckBox" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="Label" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
+          <preferred-size width="-1" height="20" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
+      </item>
+    </group>
   </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/notebook/notebook.iml" filepath="$PROJECT_DIR$/notebook/notebook.iml" />
       <module fileurl="file://$PROJECT_DIR$/notebookDomain/notebookDomain.iml" filepath="$PROJECT_DIR$/notebookDomain/notebookDomain.iml" />
       <module fileurl="file://$PROJECT_DIR$/notebookEAR/notebookEAR.iml" filepath="$PROJECT_DIR$/notebookEAR/notebookEAR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notebookService/notebookEJB.iml" filepath="$PROJECT_DIR$/notebookService/notebookEJB.iml" />
       <module fileurl="file://$PROJECT_DIR$/notebookRoot/notebookRoot.iml" filepath="$PROJECT_DIR$/notebookRoot/notebookRoot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notebookService/notebookService.iml" filepath="$PROJECT_DIR$/notebookService/notebookService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notebookServiceClient/notebookServiceClient.iml" filepath="$PROJECT_DIR$/notebookServiceClient/notebookServiceClient.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
@@ -106,6 +327,28 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
   <component name="libraryTable">
+    <library name="Maven: javax.enterprise:cdi-api:1.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/enterprise/cdi-api/1.2/cdi-api-1.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/enterprise/cdi-api/1.2/cdi-api-1.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/enterprise/cdi-api/1.2/cdi-api-1.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: javax.inject:javax.inject:1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/" />
@@ -115,6 +358,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.jboss.spec.javax.ejb:jboss-ejb-api_3.2_spec:1.0.0.Final">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/ejb/jboss-ejb-api_3.2_spec/1.0.0.Final/jboss-ejb-api_3.2_spec-1.0.0.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/ejb/jboss-ejb-api_3.2_spec/1.0.0.Final/jboss-ejb-api_3.2_spec-1.0.0.Final-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/ejb/jboss-ejb-api_3.2_spec/1.0.0.Final/jboss-ejb-api_3.2_spec-1.0.0.Final-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.jboss.spec.javax.faces:jboss-jsf-api_2.2_spec:2.2.11">

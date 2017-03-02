@@ -8,19 +8,19 @@
 
     <h:form>
         <label for="username">Username: </label>
-        <h:inputText id="usernmae" value="#{register.user.username}" /><br />
+        <h:inputText id="usernmae" value="#{userBackBean.user.username}" /><br />
         <label for="password">Password: </label>
-        <h:inputSecret id="password" value="#{register.user.password}" /><br />
+        <h:inputSecret id="password" value="#{userBackBean.user.password}" /><br />
         <label for="date_of_birth">Date of birth: </label>
-        <input type="date" jsf:id="date_of_birth" value="#{register.user.dateOfBirth}">
+        <input type="date" jsf:id="date_of_birth" value="#{userBackBean.user.dateOfBirth}">
             <f:convertDateTime pattern="yyyy-MM-dd"/>
         </input>
         <br />
         <label for="email">Email: </label>
-        <input type="email" jsf:id="email" value="#{register.user.email}" /><br />
+        <input type="email" jsf:id="email" value="#{userBackBean.user.email}" /><br />
         <label for="phone">Phone number: </label>
-        <h:inputText  value="#{register.user.phone}" /><br />
+        <h:inputText  value="#{userBackBean.user.phone}" /><br />
 
-        <h:commandButton value="Submit2" action="register_response" />
+        <h:commandButton value="Submit2" action="#{userBackBean.register}" />
     </h:form>
 </html>

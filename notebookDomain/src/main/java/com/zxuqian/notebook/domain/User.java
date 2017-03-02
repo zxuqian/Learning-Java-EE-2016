@@ -10,6 +10,8 @@ import javax.persistence.*;
  *
  */
 @Entity
+// 'from' unexpected error. Add JPA facet by project structure, then specify the persistent.xml and provider.
+@NamedQuery(name = "getAllUsersQuery", query = "from User u")
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;

@@ -7,11 +7,19 @@
   <parent>
   	<groupId>com.zxuqian</groupId>
   	<artifactId>notebookRoot</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
+  	<version>0.0.2</version>
   	<relativePath>../notebookRoot/pom.xml</relativePath>
   </parent>
   
   <build>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
 
     <plugins>
       <plugin>
@@ -31,5 +39,7 @@
       <artifactId>hibernate-jpa-2.1-api</artifactId>
       <scope>provided</scope>
     </dependency>
+
+
   </dependencies>
 </project>
