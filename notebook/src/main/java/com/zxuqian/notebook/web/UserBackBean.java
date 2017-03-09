@@ -21,9 +21,6 @@ public class UserBackBean implements Serializable {
 
     private Logger logger = Logger.getLogger(UserBackBean.class.getCanonicalName());
 
-    //@PersistenceContext(unitName = "notebookDomain")
-    //private EntityManager entityManager;
-
     @EJB
     private IUserServiceLocal userService;
 
