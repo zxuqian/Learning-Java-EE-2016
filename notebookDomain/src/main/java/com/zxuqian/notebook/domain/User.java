@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Entity implementation class for Entity: User
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @Entity
 // 'from' unexpected error. Add JPA facet by project structure, then specify the persistent.xml and provider.
 @NamedQuery(name = "getAllUsersQuery", query = "from User u")
+@XmlRootElement
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -76,6 +78,16 @@ public class User implements Serializable {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	
-   
+
+	@Override
+	public String toString() {
+		return "User{" +
+				"id=" + id +
+				", username='" + username + '\'' +
+				", password='" + password + '\'' +
+				", dateOfBirth=" + dateOfBirth +
+				", email='" + email + '\'' +
+				", phone='" + phone + '\'' +
+				'}';
+	}
 }

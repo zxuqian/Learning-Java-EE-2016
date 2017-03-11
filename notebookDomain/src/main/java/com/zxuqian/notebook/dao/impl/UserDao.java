@@ -40,6 +40,7 @@ public class UserDao implements IUserDao, Serializable {
 
     @Override
     public void deleteUser(User user) {
+        user = this.entityManager.merge(user);
         this.entityManager.remove(user);
 
     }

@@ -26,6 +26,11 @@
                             <artifactId>notebook</artifactId>
                             <contextRoot>/notebook</contextRoot>
                         </webModule>
+                        <webModule>
+                            <groupId>com.zxuqian</groupId>
+                            <artifactId>notebookRESTful</artifactId>
+                            <contextRoot>/notebook-rest</contextRoot>
+                        </webModule>
                         <ejbModule>
                             <groupId>com.zxuqian</groupId>
                             <artifactId>notebookService</artifactId>
@@ -64,6 +69,11 @@
         <dependency>
             <groupId>com.zxuqian</groupId>
             <artifactId>notebookServiceClient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.zxuqian</groupId>
+            <artifactId>notebookRESTful</artifactId>
+            <type>war</type>
         </dependency>
     </dependencies>
 </project>

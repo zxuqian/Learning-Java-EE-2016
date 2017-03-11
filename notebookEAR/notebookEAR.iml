@@ -23,5 +23,6 @@
     <orderEntry type="module" module-name="notebook" />
     <orderEntry type="module" module-name="notebookService" />
     <orderEntry type="module" module-name="notebookServiceClient" />
+    <orderEntry type="module" module-name="notebookRESTful" />
   </component>
 </module>

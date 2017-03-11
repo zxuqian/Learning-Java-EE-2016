@@ -29,6 +29,9 @@
         <element id="archive" name="notebookService-0.0.2.jar">
           <element id="artifact" artifact-name="notebookService:ejb exploded" />
         </element>
+        <element id="archive" name="notebookRESTful-0.0.2.war">
+          <element id="artifact" artifact-name="notebookRESTful:war exploded" />
+        </element>
       </root>
     </artifact>
     <artifact type="war" name="notebook:war">
@@ -133,6 +136,57 @@
         <element id="module-output" name="notebookServiceClient" />
       </root>
     </artifact>
+    <artifact type="war" name="notebookRESTful:war">
+      <output-path>$PROJECT_DIR$/notebookRESTful/target</output-path>
+      <root id="archive" name="notebookRESTful-0.0.2.war">
+        <element id="artifact" artifact-name="notebookRESTful:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="notebookRESTful:war exploded">
+      <output-path>$PROJECT_DIR$/notebookRESTful/target/notebookRESTful-0.0.2</output-path>
+      <root id="root">
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="notebookRESTful" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="archive" name="notebookService-0.0.2.jar">
+              <element id="module-output" name="notebookService" />
+            </element>
+            <element id="archive" name="notebookDomain-0.0.2.jar">
+              <element id="module-output" name="notebookDomain" />
+            </element>
+            <element id="archive" name="notebookServiceClient-0.0.2.jar">
+              <element id="module-output" name="notebookServiceClient" />
+            </element>
+          </element>
+        </element>
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/notebookRESTful/target/notebookRESTful-0.0.2/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="javaee-facet-resources" facet="notebookRESTful/web/Web" />
+      </root>
+    </artifact>
+    <artifact type="war" name="test:war">
+      <output-path>$PROJECT_DIR$/test/target</output-path>
+      <root id="archive" name="test.war">
+        <element id="artifact" artifact-name="test:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="test:war exploded">
+      <output-path>$PROJECT_DIR$/test/target/test</output-path>
+      <root id="root">
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="test" />
+          </element>
+        </element>
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/test/target/test/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="javaee-facet-resources" facet="test/web/Web" />
+      </root>
+    </artifact>
   </component>
   <component name="CompilerConfiguration">
     <annotationProcessing>
@@ -143,6 +197,7 @@
         <module name="notebook" />
         <module name="notebookDomain" />
         <module name="notebookEAR" />
+        <module name="notebookRESTful" />
         <module name="notebookService" />
         <module name="notebookServiceClient" />
       </profile>
@@ -152,9 +207,11 @@
       <module name="notebookDomain" target="1.8" />
       <module name="notebookEAR" target="1.5" />
       <module name="notebookEJB" target="1.5" />
+      <module name="notebookRESTful" target="1.8" />
       <module name="notebookRoot" target="1.5" />
       <module name="notebookService" target="1.8" />
       <module name="notebookServiceClient" target="1.8" />
+      <module name="test" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
@@ -163,6 +220,8 @@
     <file type="ejb" url="file://$PROJECT_DIR$/notebookServiceClient" />
     <file type="javaeeApplication" url="file://$PROJECT_DIR$/notebookEAR" />
     <file type="web" url="file://$PROJECT_DIR$/notebook" />
+    <file type="web" url="file://$PROJECT_DIR$/notebookRESTful" />
+    <file type="web" url="file://$PROJECT_DIR$/test" />
   </component>
   <component name="GitSharedSettings">
     <option name="FORCE_PUSH_PROHIBITED_PATTERNS">
@@ -180,6 +239,7 @@
       <list>
         <option value="$PROJECT_DIR$/notebookRoot/pom.xml" />
         <option value="$PROJECT_DIR$/notebookService/pom.xml" />
+        <option value="$PROJECT_DIR$/notebookRESTful/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -315,6 +375,7 @@
       <module fileurl="file://$PROJECT_DIR$/notebookDomain/notebookDomain.iml" filepath="$PROJECT_DIR$/notebookDomain/notebookDomain.iml" />
       <module fileurl="file://$PROJECT_DIR$/notebookEAR/notebookEAR.iml" filepath="$PROJECT_DIR$/notebookEAR/notebookEAR.iml" />
       <module fileurl="file://$PROJECT_DIR$/notebookService/notebookEJB.iml" filepath="$PROJECT_DIR$/notebookService/notebookEJB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notebookRESTful/notebookRESTful.iml" filepath="$PROJECT_DIR$/notebookRESTful/notebookRESTful.iml" />
       <module fileurl="file://$PROJECT_DIR$/notebookRoot/notebookRoot.iml" filepath="$PROJECT_DIR$/notebookRoot/notebookRoot.iml" />
       <module fileurl="file://$PROJECT_DIR$/notebookService/notebookService.iml" filepath="$PROJECT_DIR$/notebookService/notebookService.iml" />
       <module fileurl="file://$PROJECT_DIR$/notebookServiceClient/notebookServiceClient.iml" filepath="$PROJECT_DIR$/notebookServiceClient/notebookServiceClient.iml" />
@@ -380,6 +441,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/faces/jboss-jsf-api_2.2_spec/2.2.11/jboss-jsf-api_2.2_spec-2.2.11-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.0_spec:1.0.0.Final">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/ws/rs/jboss-jaxrs-api_2.0_spec/1.0.0.Final/jboss-jaxrs-api_2.0_spec-1.0.0.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/ws/rs/jboss-jaxrs-api_2.0_spec/1.0.0.Final/jboss-jaxrs-api_2.0_spec-1.0.0.Final-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/ws/rs/jboss-jaxrs-api_2.0_spec/1.0.0.Final/jboss-jaxrs-api_2.0_spec-1.0.0.Final-sources.jar!/" />
       </SOURCES>
     </library>
   </component>

@@ -73,6 +73,12 @@
                 <artifactId>notebookServiceClient</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.zxuqian</groupId>
+                <artifactId>notebookRESTful</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
       </dependencies>
     </dependencyManagement>
   
@@ -86,5 +92,6 @@
   	    <module>../notebookEAR</module>
         <module>../notebookService</module>
         <module>../notebookServiceClient</module>
+        <module>../notebookRESTful</module>
     </modules>
   </project>

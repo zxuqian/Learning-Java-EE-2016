@@ -3,9 +3,8 @@
 	<persistence-unit name="notebookDomain" transaction-type="JTA">
 		<jta-data-source>java:/MySqlDS</jta-data-source>
 		<properties>
-			<!-- Have to define dialect and use hibernate ddl generation strategy -->
-			<property name="hibernate.hbm2ddl.auto" value="create-drop"/>
-			<property name="hibernate.dialect" value="MySQL5" />
+			<!-- Have to use hibernate ddl generation strategy -->
+			<property name="hibernate.hbm2ddl.auto" value="update"/>
 		</properties>
 	</persistence-unit>
 </persistence>
