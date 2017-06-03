@@ -9,6 +9,7 @@
         <title>Qiantu - A simple Notebook</title>
     </h:head>
     <h:body>
+        <h3>View counts: #{count}</h3>
         <ul>
             <c:forEach items="#{userBackBean.users}" var="user">
                 <li>#{user.username}</li>

@@ -24,7 +24,8 @@
 
     <p><h:outputLink value="register.xhtml">Register</h:outputLink></p>
     <h:form>
-        <p><h:commandLink action="#{userBackBean.getAllUsers}">List All Users</h:commandLink></p>
+        <p><h:commandLink id="listUsers" action="#{userBackBean.getAllUsers}"
+                actionListener="#{userBackBean.increaseClickCounts}">List All Users</h:commandLink></p>
     </h:form>
 
 </h:body>

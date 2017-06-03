@@ -24,7 +24,7 @@ public class UserResource {
 
     @GET
     @Path("/{id}")
-    @Produces({MediaType.APPLICATION_JSON})
+    @Produces({MediaType.APPLICATION_XML})
     public User getUserById(@PathParam("id") Long id) {
 
         User user = this.userService.getUserById(id);

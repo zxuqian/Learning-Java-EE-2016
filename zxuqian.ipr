@@ -234,6 +234,10 @@
     </profile>
     <version value="1.0" />
   </component>
+  <component name="KotlinCommonCompilerArguments">
+    <option name="languageVersion" value="1.1" />
+    <option name="apiVersion" value="1.1" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -374,7 +378,6 @@
       <module fileurl="file://$PROJECT_DIR$/notebook/notebook.iml" filepath="$PROJECT_DIR$/notebook/notebook.iml" />
       <module fileurl="file://$PROJECT_DIR$/notebookDomain/notebookDomain.iml" filepath="$PROJECT_DIR$/notebookDomain/notebookDomain.iml" />
       <module fileurl="file://$PROJECT_DIR$/notebookEAR/notebookEAR.iml" filepath="$PROJECT_DIR$/notebookEAR/notebookEAR.iml" />
-      <module fileurl="file://$PROJECT_DIR$/notebookService/notebookEJB.iml" filepath="$PROJECT_DIR$/notebookService/notebookEJB.iml" />
       <module fileurl="file://$PROJECT_DIR$/notebookRESTful/notebookRESTful.iml" filepath="$PROJECT_DIR$/notebookRESTful/notebookRESTful.iml" />
       <module fileurl="file://$PROJECT_DIR$/notebookRoot/notebookRoot.iml" filepath="$PROJECT_DIR$/notebookRoot/notebookRoot.iml" />
       <module fileurl="file://$PROJECT_DIR$/notebookService/notebookService.iml" filepath="$PROJECT_DIR$/notebookService/notebookService.iml" />

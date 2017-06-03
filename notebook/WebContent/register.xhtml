@@ -8,7 +8,12 @@
 
     <h:form>
         <label for="username">Username: </label>
-        <h:inputText id="usernmae" value="#{userBackBean.user.username}" /><br />
+        <h:inputText id="usernmae" value="#{userBackBean.user.username}"
+                     valueChangeListener="#{userBackBean.userNameChanged}" >
+            <f:validateRegex pattern="[a-zA-Z0-9_]{6,}"/>
+        </h:inputText>
+        <h:message for="usernmae" />
+        <br />
         <label for="password">Password: </label>
         <h:inputSecret id="password" value="#{userBackBean.user.password}" /><br />
         <label for="date_of_birth">Date of birth: </label>

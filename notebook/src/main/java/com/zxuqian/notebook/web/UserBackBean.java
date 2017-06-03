@@ -7,6 +7,9 @@ import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.context.FacesContext;
+import javax.faces.event.ActionEvent;
+import javax.faces.event.ValueChangeEvent;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
@@ -57,5 +60,25 @@ public class UserBackBean implements Serializable {
         this.users = this.userService.getAllUsers();
 
         return "user_list";
+    }
+
+    public void userNameChanged(ValueChangeEvent event) {
+        if(null != event.getNewValue()) {
+            logger.info("Entering user name changed listener: " + event.getNewValue());
+        }
+
+    }
+
+    public void increaseClickCounts(ActionEvent event) {
+        FacesContext context = FacesContext.getCurrentInstance();
+        Object obj = context.getExternalContext().getSessionMap().get("count");
+        if(obj != null) {
+            Integer count = (Integer) obj;
+            count++;
+            context.getExternalContext().getSessionMap().put("count", count);
+        } else {
+            context.getExternalContext().getSessionMap().put("count", 1);
+        }
+
     }
 }
