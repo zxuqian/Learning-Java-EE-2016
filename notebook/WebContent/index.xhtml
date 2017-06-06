@@ -4,6 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
 >
     
 <h:head>
@@ -14,11 +16,11 @@
     <p>Please add a note: </p>
     <h:form>
         <label for="username">Name: </label>
-        <h:inputText id="username" value="#{note.name}" /><br />
+        <h:inputText id="username" value="#{noteBackBean.name}" /><br />
         <label for="email">email: </label>
-        <input type="email" jsf:id="email" value="#{note.email}" /><br />
+        <input type="email" jsf:id="email" value="#{noteBackBean.email}" /><br />
         <label for="note">Note: </label>
-        <h:inputTextarea id="note" rows="8" value="#{note.note}"></h:inputTextarea><br />
+        <h:inputTextarea id="note" rows="8" value="#{noteBackBean.note}"></h:inputTextarea><br />
         <input type="submit" jsf:id="submit" action="response" value="Submit" />
     </h:form>
 
@@ -27,6 +29,26 @@
         <p><h:commandLink id="listUsers" action="#{userBackBean.getAllUsers}"
                 actionListener="#{userBackBean.increaseClickCounts}">List All Users</h:commandLink></p>
     </h:form>
+
+    <!-- Add category section -->
+    <h:form>
+        <p>
+            <h:outputLabel for="categoryName">Create a new category: </h:outputLabel>
+            <h:inputText id="categoryName" value="#{noteBackBean.categoryName}" />
+            <h:commandButton action="#{noteBackBean.addCategory}" value="Add">
+                <h:outputScript target="head" library="js" name="script.js" />
+                <f:ajax render="categories" execute="categoryName" onevent="handleEvent" />
+            </h:commandButton>
+        </p>
+    </h:form>
+    <!-- Show all categories -->
+    <div>
+        <ul jsf:id="categories">
+            <c:forEach items="${noteBackBean.categories}" var="category">
+                <li>${category}</li>
+            </c:forEach>
+        </ul>
+    </div>
 
 </h:body>
 
