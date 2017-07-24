@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <composite:interface>
+        <composite:attribute name="userBackBean" required="true" />
+        <composite:attribute name="className"/>
+        <composite:attribute name="submitBtnText" default="Submit" />
+        <composite:attribute name="formTitle" default="Registration Form"/>
+    </composite:interface>
+
+    <composite:implementation>
+        <div id="#{cc.attrs.id}" class="#{cc.attrs.className}">
+            <h1>#{cc.attrs.formTitle}</h1>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <label for="username">Username: </label>
+                    <h:column>
+                        <h:inputText id="username" value="#{cc.attrs.userBackBean.user.username}"
+                                     valueChangeListener="#{cc.attrs.userBackBean.userNameChanged}" >
+                            <f:validateRegex pattern="[a-zA-Z0-9_]{6,}"/>
+                        </h:inputText>
+                        <h:message for="username" />
+                    </h:column>
+                    <label for="password">Password: </label>
+                    <h:inputSecret id="password" value="#{cc.attrs.userBackBean.user.password}" />
+                    <label for="date_of_birth">Date of birth: </label>
+                    <input type="date" jsf:id="date_of_birth" value="#{cc.attrs.userBackBean.user.dateOfBirth}">
+                        <f:convertDateTime pattern="yyyy-MM-dd"/>
+                    </input>
+                    <label for="email">Email: </label>
+                    <input type="email" jsf:id="email" value="#{cc.attrs.userBackBean.user.email}" />
+                    <label for="phone">Phone number: </label>
+                    <h:inputText id="phone"  value="#{cc.attrs.userBackBean.user.phone}" />
+                    <h:commandButton value="#{cc.attrs.submitBtnText}" action="#{cc.attrs.userBackBean.register}" />
+                </h:panelGrid>
+
+            </h:form>
+        </div>
+
+    </composite:implementation>
+
+
+
+</html>

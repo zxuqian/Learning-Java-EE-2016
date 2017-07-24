@@ -1,54 +1,65 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:jsf="http://xmlns.jcp.org/jsf"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
->
-    
-<h:head>
-    <title>Qiantu - A simple Notebook</title>
-</h:head>
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:nbcomp="http://java.sun.com/jsf/composite/components"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
 <h:body>
-    <h2>Hello, welcome!</h2>
-    <p>Please add a note: </p>
-    <h:form>
-        <label for="username">Name: </label>
-        <h:inputText id="username" value="#{noteBackBean.name}" /><br />
-        <label for="email">email: </label>
-        <input type="email" jsf:id="email" value="#{noteBackBean.email}" /><br />
-        <label for="note">Note: </label>
-        <h:inputTextarea id="note" rows="8" value="#{noteBackBean.note}"></h:inputTextarea><br />
-        <input type="submit" jsf:id="submit" action="response" value="Submit" />
-    </h:form>
+    <ui:composition template="template.xhtml">
+        <ui:define name="content">
+            <h1 class="title">Hello, welcome!</h1>
+            <div class="menu">
+                <p><h:outputLink id="registerLink" onclick="toggleRegistrationForm()" value="#">Register</h:outputLink></p>
+                <h:form>
+                    <p><h:commandLink id="listUsers" action="#{userBackBean.getAllUsers}"
+                                      actionListener="#{userBackBean.increaseClickCounts}">List All Users</h:commandLink></p>
+                </h:form>
+            </div>
 
-    <p><h:outputLink value="register.xhtml">Register</h:outputLink></p>
-    <h:form>
-        <p><h:commandLink id="listUsers" action="#{userBackBean.getAllUsers}"
-                actionListener="#{userBackBean.increaseClickCounts}">List All Users</h:commandLink></p>
-    </h:form>
+            <div class="add_note">
+                <p>Please add a note: </p>
+                <h:form id="note_form">
+                    <label for="username">Name: </label>
+                    <h:inputText id="username" value="#{noteBackBean.name}" /><br />
+                    <label for="email">email: </label>
+                    <input type="email" jsf:id="email" value="#{noteBackBean.email}" /><br />
+                    <label for="note">Note: </label>
+                    <h:inputTextarea id="note" rows="8" value="#{noteBackBean.note}"></h:inputTextarea><br />
+                    <input type="submit" jsf:id="submit" jsf:action="response" value="Submit" />
+                </h:form>
+            </div>
 
-    <!-- Add category section -->
-    <h:form>
-        <p>
-            <h:outputLabel for="categoryName">Create a new category: </h:outputLabel>
-            <h:inputText id="categoryName" value="#{noteBackBean.categoryName}" />
-            <h:commandButton action="#{noteBackBean.addCategory}" value="Add">
-                <h:outputScript target="head" library="js" name="script.js" />
-                <f:ajax render="categories" execute="categoryName" onevent="handleEvent" />
-            </h:commandButton>
-        </p>
-    </h:form>
-    <!-- Show all categories -->
-    <div>
-        <ul jsf:id="categories">
-            <c:forEach items="${noteBackBean.categories}" var="category">
-                <li>${category}</li>
-            </c:forEach>
-        </ul>
-    </div>
+
+            <!-- Add category section -->
+            <div class="add_category">
+                <h:form id="category_form">
+                    <p>
+                        <h:outputLabel for="categoryName">Create a new category: </h:outputLabel>
+                        <h:inputText id="categoryName" value="#{noteBackBean.categoryName}" />
+                        <h:commandButton action="#{noteBackBean.addCategory}" value="Add">
+                            <h:outputScript target="head" library="js" name="script.js" />
+                            <f:ajax render="categories" execute="categoryName" onevent="handleEvent" />
+                        </h:commandButton>
+                    </p>
+                </h:form>
+            </div>
+
+            <!-- Show all categories -->
+            <div class="show_categories">
+                <ul jsf:id="categories">
+                    <c:forEach items="${noteBackBean.categories}" var="category">
+                        <li>${category}</li>
+                    </c:forEach>
+                </ul>
+            </div>
+
+            <!-- Registration Form -->
+            <nbcomp:registrationForm id="registrationForm" className="hide" userBackBean="#{userBackBean}" submitBtnText="Register" />
+        </ui:define>
+    </ui:composition>
 
 </h:body>
 

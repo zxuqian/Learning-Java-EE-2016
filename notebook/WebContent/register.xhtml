@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:jsf="http://xmlns.jcp.org/jsf"
@@ -8,11 +7,11 @@
 
     <h:form>
         <label for="username">Username: </label>
-        <h:inputText id="usernmae" value="#{userBackBean.user.username}"
+        <h:inputText id="username" value="#{userBackBean.user.username}"
                      valueChangeListener="#{userBackBean.userNameChanged}" >
             <f:validateRegex pattern="[a-zA-Z0-9_]{6,}"/>
         </h:inputText>
-        <h:message for="usernmae" />
+        <h:message for="username" />
         <br />
         <label for="password">Password: </label>
         <h:inputSecret id="password" value="#{userBackBean.user.password}" /><br />
@@ -24,7 +23,7 @@
         <label for="email">Email: </label>
         <input type="email" jsf:id="email" value="#{userBackBean.user.email}" /><br />
         <label for="phone">Phone number: </label>
-        <h:inputText  value="#{userBackBean.user.phone}" /><br />
+        <h:inputText id="phone"  value="#{userBackBean.user.phone}" /><br />
 
         <h:commandButton value="Submit" action="#{userBackBean.register}" />
     </h:form>
